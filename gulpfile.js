@@ -14,11 +14,11 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('css', function (done) {
-    gulp.src('./css/*.css')
+    gulp.src('./src/css/*.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./css/'));
-    done();
+        .pipe(gulp.dest('./dist/css/'));
+    done();gulp-cssmin
 });
 
 function defaultTask(cb) {

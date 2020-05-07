@@ -21,9 +21,9 @@ const autoprefixer = require('gulp-autoprefixer');
  function serveSass() {
   return src("src/sass/*.sass")
       .pipe(sass())
-      .pipe(autoprefixer({
-        cascade: false
-    }))
+    //   .pipe(autoprefixer({
+    //     cascade: false
+    // }))
       .pipe(dest("src/css"))
       .pipe(browserSync.stream());
 };

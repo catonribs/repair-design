@@ -74,7 +74,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -307,7 +306,8 @@ template {
 .button {
   padding: 13px 20px;
   border: none;
-  border-radius: 2px; }
+  border-radius: 2px;
+  text-transform: uppercase; }
   .button--primary {
     background-color: #E3B873;
     color: #fff; }

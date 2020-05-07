@@ -362,14 +362,14 @@ template {
 
 .hero {
   position: relative;
-  padding-top: 100px;
+  padding-top: 90px;
   background: #131313 url("../img/hero_bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
   .hero__instagram {
     position: absolute;
     left: 0;
-    max-width: 80px;
+    max-width: 85px;
     height: 100%; }
 
 .instagram {
@@ -385,6 +385,9 @@ template {
 
 .title {
   margin: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
 
 body {
   font-family: 'FuturaBook', sans-serif;

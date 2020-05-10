@@ -21,6 +21,9 @@
     max-width: 500px
   &__button
     margin-right: 20px
+    transition: 0.5s
+    &:hover
+      transform: scale(1.2)
   &__instagram
     position: absolute
     top: 0
@@ -40,6 +43,7 @@
     text-transform: uppercase
     text-decoration: none
     color: $light
+    transition: color 0.5s
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center
@@ -48,6 +52,9 @@
       border: 2px solid $primary
       border-radius: 50%
       margin-left: 12px
+    &:hover
+      color: $primary
+      
 
 .instagram
   display: flex
@@ -61,12 +68,16 @@
     text-decoration: none
     color: $primary
     transform: rotate(90deg)
+    line-height: 0.8
+    transition: color 0.5s
     &::after
       content: ''
       width: 50px
       height: 1px
       background-color: $primary
       margin-left: 8px
+    &:hover
+      color: $light
     
 .title
   margin: 0

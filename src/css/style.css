@@ -367,6 +367,9 @@ body {
       background-color: #E3B873;
       margin: 0 10px; }
 
+.button {
+  font-family: 'Futura Demi'; }
+
 .header {
   position: fixed;
   left: 0;
@@ -544,6 +547,11 @@ body {
     margin-right: 0;
     color: #fff;
     text-decoration: none; }
+    .contacts__phone:hover {
+      box-shadow: none;
+      color: #fff;
+      text-decoration: none;
+      cursor: auto; }
   .contacts__button {
     display: none; }
   .title {
@@ -564,3 +572,23 @@ body {
 @media screen and (max-height: 530px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 375px) {
+  .hero__title {
+    font-size: 2rem;
+    margin-bottom: 1.1rem; }
+  .hero__content {
+    margin-left: -10px;
+    margin-top: -300px;
+    min-width: 28.2rem; }
+  .hero__text {
+    font-size: 1.5rem;
+    max-width: 26.4rem;
+    line-height: 135%;
+    margin-bottom: 2.8rem; }
+  .hero__button {
+    display: block;
+    min-width: 100%;
+    margin-bottom: 2.2rem;
+    font-size: 1.1rem;
+    padding: 19px auto; } }

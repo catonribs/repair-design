@@ -42,6 +42,11 @@
       margin-right: 0
       color: $light
       text-decoration: none
+      &:hover
+        box-shadow: none
+        color: $light
+        text-decoration: none
+        cursor: auto
     &__button
       display: none
   .title
@@ -64,4 +69,25 @@
     &__scroll-down
       display: none
 
-  
+@media screen and ( max-width: 375px )
+  .hero    
+    &__title
+      font-size: 2rem
+      margin-bottom: 1.1rem
+    &__content 
+      margin-left: -10px
+      margin-top: -300px     
+      min-width: 28.2rem
+    &__text      
+      font-size: 1.5rem
+      max-width: 26.4rem
+      line-height: 135%
+      margin-bottom: 2.8rem
+    &__button
+      display: block
+      min-width: 100%
+      margin-bottom: 2.2rem
+      font-size: 1.1rem      
+      padding: 19px auto
+
+   

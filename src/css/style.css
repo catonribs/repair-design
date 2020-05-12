@@ -353,6 +353,9 @@ body {
 img {
   max-width: 100%; }
 
+p {
+  margin: 0; }
+
 .section {
   padding: 50px 0; }
   .section-title {
@@ -362,13 +365,19 @@ img {
     .section-title__image {
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      margin-bottom: 2rem; }
       .section-title__image::before, .section-title__image::after {
         content: '';
         width: 32px;
         height: 2px;
         background-color: #E3B873;
         margin: 0 10px; }
+  .section-description {
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #363636; }
 
 .button {
   font-family: 'Futura Demi', sans-serif; }
@@ -409,6 +418,9 @@ img {
 
 .contacts__phone {
   margin-right: 41px; }
+
+.contacts__button {
+  padding: 11px 21px; }
 
 .hero {
   position: relative;
@@ -553,6 +565,7 @@ img {
   font-weight: normal;
   text-transform: uppercase;
   background-color: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   color: #fff;
   padding: 1.214rem 2.6rem; }
 
@@ -566,7 +579,7 @@ img {
   .hero__button {
     transition: 0.5s; }
     .hero__button:hover {
-      transform: scale(1.05); }
+      background-color: transparent; }
   .hero__scroll-down {
     transition: color 0.5s; }
     .hero__scroll-down:hover {
@@ -583,6 +596,8 @@ img {
       transition: 0.5s; }
       .button--primary:hover {
         box-shadow: none; }
+    .button--outline:hover {
+      background-color: #E3B873; }
   .nav__item {
     transition: color 0.2s; }
     .nav__item:hover {
@@ -615,7 +630,8 @@ img {
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0;
+    margin-top: -10rem; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -659,5 +675,7 @@ img {
   .hero__button {
     display: block;
     min-width: 100%;
-    margin-bottom: 2.2rem;
-    padding: 19px auto; } }
+    margin-bottom: 2.2rem; }
+  .card__text {
+    margin-left: 0;
+    margin-top: -12rem; } }

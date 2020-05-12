@@ -8,6 +8,8 @@ body
   font-size: 1rem
 img
   max-width: 100%
+p 
+  margin: 0
 .section
   padding: 50px 0
   &-title
@@ -18,12 +20,20 @@ img
       display: flex
       align-items: center
       justify-content: center
+      margin-bottom: 2rem
       &::before, &::after
         content: ''        
         width: 32px
         height: 2px
         background-color: $primary
         margin: 0 10px
+  &-description    
+    font-family: 'Futura Book', sans-serif    
+    font-weight: normal
+    font-size: 1rem
+    color: #363636
+
+    
 .button
   font-family: 'Futura Demi', sans-serif
         

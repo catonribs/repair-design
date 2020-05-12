@@ -9,7 +9,7 @@
     &__button
       transition: 0.5s
       &:hover
-        transform: scale(1.05)
+        background-color: transparent
     &__scroll-down
       transition: color 0.5s
       &:hover
@@ -28,6 +28,9 @@
       transition: 0.5s
       &:hover
         box-shadow: none
+    &--outline
+      &:hover        
+        background-color: $primary
   .nav
     &__item
       transition: color 0.2s   
@@ -72,6 +75,7 @@
   .card
     &__text
       margin-left: 0
+      margin-top: -10rem
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
@@ -118,7 +122,11 @@
     &__button
       display: block
       min-width: 100%
-      margin-bottom: 2.2rem            
-      padding: 19px auto
+      margin-bottom: 2.2rem   
+  .card
+    &__text
+      margin-left: 0
+      margin-top: -12rem         
+      
 
    

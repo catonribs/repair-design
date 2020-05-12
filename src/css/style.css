@@ -438,16 +438,13 @@ body {
   .hero__button {
     margin-right: 15px;
     padding: 18px 26px; }
-
-.button--outline {
-  padding: 18px 42px; }
-  .button--outline__instagram {
+  .hero__instagram {
     position: absolute;
     top: 0;
     left: 0;
     max-width: 6.07rem;
     height: 100%; }
-  .button--outline__scroll-down {
+  .hero__scroll-down {
     position: absolute;
     display: flex;
     align-items: center;
@@ -463,7 +460,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff; }
-    .button--outline__scroll-down::after {
+    .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
       width: 30px;
@@ -471,6 +468,9 @@ body {
       border: 2px solid #E3B873;
       border-radius: 50%;
       margin-left: 17px; }
+
+.button--outline {
+  padding: 18px 42px; }
 
 .instagram {
   display: flex;
@@ -513,10 +513,6 @@ body {
     transition: 0.5s; }
     .hero__button:hover {
       transform: scale(1.05); }
-  .hero__scroll-down {
-    transition: color 0.5s; }
-    .hero__scroll-down:hover {
-      color: #E3B873; }
   .instagram__link {
     transition: color 0.5s; }
     .instagram__link:hover {

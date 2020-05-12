@@ -1,13 +1,24 @@
 .types
   &__section-title
-    margin-bottom: 2rem
+    margin-bottom: 2rem 
+.card-design
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    background-color: rgba($dark, 0.4)
+    top: 0
+    left: 0
+    width: 392px
+    height: 421px 
+
 .row
   display: flex
   align-items: flex-start
   justify-content: space-between
 .col
   flex-basis: 32%
-.card
+.card   
   &__text
     position: relative
     max-width: 23.6rem

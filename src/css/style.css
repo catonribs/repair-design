@@ -361,12 +361,14 @@ p {
   .section-title {
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
+    font-family: 'Yeseva One', cursive;
+    font-size: 0.952rem; }
+    .section-title__heading {
+      font-weight: normal; }
     .section-title__image {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem; }
+      justify-content: center; }
       .section-title__image::before, .section-title__image::after {
         content: '';
         width: 32px;
@@ -376,8 +378,14 @@ p {
   .section-description {
     font-family: 'Futura Book', sans-serif;
     font-weight: normal;
-    font-size: 1rem;
-    color: #363636; }
+    text-transform: none;
+    font-size: 20px;
+    line-height: 27px;
+    color: #363636;
+    text-align: center;
+    width: 58%;
+    margin: 0 auto;
+    margin-bottom: 2.4rem; }
 
 .button {
   font-family: 'Futura Demi', sans-serif; }
@@ -523,6 +531,17 @@ p {
 
 .types__section-title {
   margin-bottom: 2rem; }
+
+.card-design {
+  position: relative; }
+  .card-design::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(19, 19, 19, 0.4);
+    top: 0;
+    left: 0;
+    width: 392px;
+    height: 421px; }
 
 .row {
   display: flex;
@@ -690,4 +709,7 @@ p {
     margin-bottom: 2.2rem; }
   .card__text {
     margin-left: 0;
-    margin-top: -12rem; } }
+    margin-top: -12rem; }
+  .card__list {
+    overflow: hidden;
+    max-height: 12.6rem; } }

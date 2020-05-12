@@ -10,10 +10,10 @@
       transition: 0.5s
       &:hover
         transform: scale(1.05)
-    // &__scroll-down
-    //   transition: color 0.5s
-    //   &:hover
-    //     color: $primary
+    &__scroll-down
+      transition: color 0.5s
+      &:hover
+        color: $primary
   .instagram
     &__link
       transition: color 0.5s
@@ -63,6 +63,15 @@
     &__content
       width: 90%
       margin: auto  
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 5rem
+  .card
+    &__text
+      margin-left: 0
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
@@ -71,10 +80,11 @@
       text-decoration: none      
     &__button
       display: none
-  .title
-    font-size: 2.3rem
-    font-weight: normal
+  
   .hero
+    &__title
+      font-size: 2.4rem
+      font-weight: normal
     &__scroll-down
       display: none
     &__content      
@@ -87,7 +97,7 @@
       min-width: 22.8rem
       margin-right: 0
       margin-bottom: 1.85rem
-@media screen and ( max-height: 690px )
+@media screen and ( max-height: 590px )
   .hero
     &__scroll-down
       display: none
@@ -99,7 +109,7 @@
       font-size: 1.91rem
       margin-bottom: 1.1rem
     &__content            
-      min-width: 90%
+      min-width: 100%
     &__text      
       font-size: 1.5rem
       max-width: 26.4rem
@@ -108,8 +118,7 @@
     &__button
       display: block
       min-width: 100%
-      margin-bottom: 2.2rem
-      font-size: 1.1rem      
+      margin-bottom: 2.2rem            
       padding: 19px auto
 
    

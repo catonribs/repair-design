@@ -636,6 +636,8 @@ p {
     padding: 1.214rem 5.5rem 1.214rem 2.35rem; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   left: 0;
@@ -648,6 +650,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.14rem;
@@ -663,7 +668,8 @@ p {
     height: 28px;
     background: transparent url(../img/close.svg) no-repeat center;
     border: none;
-    margin: 12px; }
+    margin: 12px;
+    cursor: pointer; }
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-weight: normal;

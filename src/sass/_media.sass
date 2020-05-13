@@ -4,6 +4,9 @@
   .nav
     &__item
       margin-right: 1rem
+  .hero
+    &__text
+      max-width: 450px
 @media screen and ( min-width: 992px )
   .hero 
     &__button
@@ -66,6 +69,8 @@
     &__content
       width: 90%
       margin: auto  
+    &__text
+      max-width: 37rem
   .row
     flex-direction: column
     align-items: center
@@ -87,14 +92,15 @@
   
   .hero
     &__title
-      font-size: 2.4rem
-      font-weight: normal
+      font-size: 2.31rem
+      
     &__scroll-down
       display: none
     &__content      
       max-width: 90%
     &__text
-      font-size: 1.6rem
+      max-width: 330px
+      font-size: 1.4rem
       margin-bottom: 2.28rem
     &__button
       display: block
@@ -108,8 +114,7 @@
 
 @media screen and ( max-width: 375px )
   .hero    
-    &__title
-      letter-spacing: -0.1px
+    &__title      
       font-size: 1.91rem
       margin-bottom: 1.1rem
     &__content            
@@ -119,8 +124,7 @@
       max-width: 26.4rem
       line-height: 135%
       margin-bottom: 2.8rem
-    &__button
-      display: block
+    &__button      
       min-width: 100%
       margin-bottom: 2.2rem   
   .card

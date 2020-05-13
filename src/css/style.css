@@ -604,7 +604,9 @@ p {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .hero__text {
+    max-width: 450px; } }
 
 @media screen and (min-width: 992px) {
   .hero__button {
@@ -655,6 +657,8 @@ p {
   .hero__content {
     width: 90%;
     margin: auto; }
+  .hero__text {
+    max-width: 37rem; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -672,14 +676,14 @@ p {
   .contacts__button {
     display: none; }
   .hero__title {
-    font-size: 2.4rem;
-    font-weight: normal; }
+    font-size: 2.31rem; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
     max-width: 90%; }
   .hero__text {
-    font-size: 1.6rem;
+    max-width: 330px;
+    font-size: 1.4rem;
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
@@ -693,7 +697,6 @@ p {
 
 @media screen and (max-width: 375px) {
   .hero__title {
-    letter-spacing: -0.1px;
     font-size: 1.91rem;
     margin-bottom: 1.1rem; }
   .hero__content {
@@ -704,7 +707,6 @@ p {
     line-height: 135%;
     margin-bottom: 2.8rem; }
   .hero__button {
-    display: block;
     min-width: 100%;
     margin-bottom: 2.2rem; }
   .card__text {

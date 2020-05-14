@@ -418,7 +418,7 @@ p {
     line-height: 27px;
     color: #363636;
     text-align: center;
-    width: 58%;
+    width: 52rem;
     margin: 0 auto;
     margin-bottom: 2.4rem; }
 
@@ -564,7 +564,7 @@ p {
   .title--primary {
     color: #E3B873; }
 
-.types__section-title {
+.types__section-title, .design__section-title {
   margin-bottom: 2rem; }
 
 .image__shadow {
@@ -627,9 +627,13 @@ p {
   background-color: #E3B873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   color: #fff;
-  padding: 1.214rem 2.6rem; }
+  width: 16.285rem;
+  height: 3.857rem;
+  text-align: center;
+  padding: 1.2rem 0; }
 
 .design__pricetag {
+  text-align: left;
   padding: 1.214rem 5.5rem 1.214rem 2.35rem; }
 
 .modal {
@@ -740,7 +744,12 @@ p {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card, .design__card {
+    margin-bottom: 5rem; } }
 
 @media screen and (max-width: 768px) {
   .hero__content {
@@ -751,11 +760,14 @@ p {
   .row {
     flex-direction: column;
     align-items: center; }
-  .types__card {
+  .types__card, .design__card {
     margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0;
-    margin-top: -10rem; } }
+    margin-top: -10rem; }
+  .section-title {
+    font-size: 1.222rem; }
+  .section-description {
+    width: 45rem; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -778,7 +790,19 @@ p {
     display: block;
     min-width: 22.8rem;
     margin-right: 0;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .image__shadow {
+    position: relative; }
+    .image__shadow::before {
+      content: '';
+      position: absolute;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 99%; } }
 
 @media screen and (max-height: 590px) {
   .hero__scroll-down {
@@ -798,9 +822,28 @@ p {
   .hero__button {
     min-width: 100%;
     margin-bottom: 2.2rem; }
+  .card__title {
+    font-size: 1.25rem; }
   .card__text {
-    margin-left: 0;
-    margin-top: -12rem; }
+    max-width: 22.6rem;
+    padding: 1.79rem 2.14rem;
+    margin-top: -12rem;
+    margin-left: 0; }
   .card__list {
-    overflow: hidden;
-    max-height: 12.6rem; } }
+    max-height: 12.6rem;
+    margin-bottom: 2rem; }
+  .card__pricetag {
+    font-size: 1.25rem;
+    width: 15.87rem;
+    height: 3.33rem;
+    text-align: center;
+    padding: 1.2rem 0; }
+  .design__pricetag {
+    text-align: left;
+    padding: 0.8rem 3.8rem; }
+  .section-description {
+    font-size: 1.25rem;
+    line-height: 135%;
+    width: 25rem; }
+  .types__section-title, .design__section-title {
+    margin-bottom: 3.3rem; } }

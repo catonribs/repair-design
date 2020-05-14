@@ -837,13 +837,14 @@ p {
     margin-top: -12rem;
     margin-left: 0; }
   .card__list {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    line-height: 1.85rem; }
   .card__pricetag {
     font-size: 1.25rem;
-    width: 15.87rem;
-    height: 3.33rem;
+    min-width: 15.87rem;
+    min-height: 3.33rem;
     text-align: center;
-    padding: 1.2rem 0; }
+    padding: 1rem 0; }
   .design__pricetag {
     text-align: left;
     padding: 0.8rem 3.8rem; }

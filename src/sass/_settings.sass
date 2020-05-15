@@ -12,13 +12,38 @@ p
   margin: 0
 .section
   padding: 50px 0
+  &--dark
+    background: $dark url('../img/projects_bg.jpg') no-repeat center / cover
+    // background-color: $dark
+    color: $light
   &-title
     text-align: center
     text-transform: uppercase
     font-family: 'Yeseva One', cursive
     font-size: 0.952rem
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 92px
+        height: 1px
+        background-color: $primary
+        margin-left: 2rem
+    &--left
+      text-align: left
     &__heading  
-      font-weight: normal    
+      font-weight: normal
+      &--primary
+        line-height: 138.6%
+        color: $primary  
+    &__text
+      font-size: 1.28rem
+      line-height: 2.07rem
+      font-family: 'Futura Book', sans-serif
+      font-weight: normal 
+      text-transform: none
+      max-width: 31.57rem
     &__image 
       display: flex
       align-items: center

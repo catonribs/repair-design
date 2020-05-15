@@ -14,7 +14,7 @@ p
   padding: 50px 0
   &--dark
     background: $dark url('../img/projects_bg.jpg') no-repeat center / cover
-    // background-color: $dark
+    background-color: $dark
     color: $light
   &-title
     text-align: center
@@ -29,21 +29,27 @@ p
         width: 92px
         height: 1px
         background-color: $primary
-        margin-left: 2rem
+        margin-left: 2.5rem
     &--left
       text-align: left
     &__heading  
       font-weight: normal
       &--primary
-        line-height: 138.6%
+        margin: 0
+        font-size: 2rem
+        line-height: 135%
+        letter-spacing: -0.2rem
         color: $primary  
+        margin-bottom: 1.4rem
     &__text
-      font-size: 1.28rem
+      font-size: 1.29rem
       line-height: 2.07rem
       font-family: 'Futura Book', sans-serif
       font-weight: normal 
       text-transform: none
       max-width: 31.57rem
+      margin-bottom: 3.3rem
+      
     &__image 
       display: flex
       align-items: center
@@ -75,13 +81,13 @@ p
 #btn-up 
   display: inline-block
   background-color: $primary
-  width: 50px
-  height: 50px
+  width: 40px
+  height: 40px
   text-align: center
   border-radius: 20%
   position: fixed
-  bottom: 30px
-  right: 50px
+  bottom: 20px
+  right: 20px
   transition: background-color .3s, opacity .5s, visibility .5s
   opacity: 0
   visibility: hidden
@@ -91,8 +97,8 @@ p
     font-family: FontAwesome
     font-weight: normal
     font-style: normal
-    font-size: 2em
-    line-height: 50px
+    font-size: 30px
+    line-height: 35px
     color: #fff
   &:hover 
     cursor: pointer

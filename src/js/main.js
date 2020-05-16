@@ -39,10 +39,11 @@ $(document).ready(function () {
       modal.removeClass('modal--visible');
     }
   });
-  $(document).on('click', function(e) { 
-    if ($(e.target).closest(modal).length) { 
+  $(document).mouseup(function(e) { 
+    if (modal.has(e.target).length === 0) { 
       modal.removeClass('modal--visible');
     }
+    
   });
 
   var btn = $('#btn-up');

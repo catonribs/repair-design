@@ -59,7 +59,8 @@
     &:hover
       text-decoration: none
       color: $light
-
+  
+    
 
 @media screen and ( max-width: 992px )
   .nav
@@ -82,12 +83,14 @@
   .section   
     &-description      
       color: $light    
-  .section--dark
+  .section_dark
     background-color: $dark
     background-image: none
+    
   .swiper
     &-slide      
-      &__text        
+      &__text  
+        flex-basis: 25%      
         margin-bottom: 2.5rem     
         &:nth-child(odd)         
           margin-right: -7px 
@@ -124,6 +127,10 @@
       font-size: 1.222rem
     &-description
       max-width: 45rem
+  .swiper
+    &-slide      
+      &__text  
+        flex-basis: 50% 
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
@@ -139,6 +146,8 @@
       
     &__scroll-down
       display: none
+      &::after
+        display: none
     &__content      
       max-width: 90%
     &__text

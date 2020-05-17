@@ -380,7 +380,7 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 30%; }
+  flex-basis: 32%; }
 
 .col-45 {
   width: 45%;
@@ -388,6 +388,16 @@ template {
 
 .col-55 {
   width: 55%; }
+
+.col-40 {
+  width: 40%; }
+
+.col-60 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -408,7 +418,7 @@ p {
 
 .section {
   padding: 50px 0; }
-  .section--dark {
+  .section_dark {
     background: #131313 url("../img/projects_bg.jpg") no-repeat center/cover;
     background-color: #131313;
     color: #fff; }
@@ -468,6 +478,7 @@ p {
     margin-bottom: 3.1rem; }
 
 .button {
+  cursor: pointer;
   font-family: 'Futura Demi', sans-serif; }
 
 #btn-up {
@@ -678,6 +689,7 @@ p {
     background-color: #fff; }
 
 .swiper-button-prev, .swiper-button-next {
+  outline: none;
   bottom: 0;
   top: auto;
   background-size: 42px;
@@ -703,6 +715,12 @@ p {
   margin-right: 13px; }
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:last-child {
     margin-right: 0; }
+
+.step__image {
+  margin-top: 150px;
+  object-fit: cover;
+  width: 54.64rem;
+  height: 26.92rem; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -772,6 +790,56 @@ p {
   .design__pricetag {
     text-align: left;
     padding-left: 2.35rem; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap; }
+  .swiper-slide__text {
+    flex-basis: 50%; }
+  .swiper-slide__heading {
+    font-size: 1.3rem;
+    line-height: 1.78rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 0.3rem; }
+  .swiper-slide__value {
+    font-size: 1.07rem;
+    line-height: 1.428rem;
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal; }
+
+.swiper-pagination1-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0; }
+  .swiper-pagination1-bullet-active {
+    background-color: #fff; }
+
+.swiper-button-prev1, .swiper-button-next1 {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev1::after, .swiper-button-next1::after {
+    display: none; }
+
+.swiper-button-prev1 {
+  left: 0;
+  background: url(../img/arrow-prev.svg) no-repeat center; }
+
+.swiper-button-next1 {
+  background: url(../img/arrow-next.svg) no-repeat center; }
+
+.step__image {
+  margin-top: 150px;
+  object-fit: cover;
+  width: 54.64rem;
+  height: 26.92rem; }
 
 .modal {
   opacity: 0;
@@ -897,10 +965,11 @@ p {
       color: #fff; }
   .section-description {
     color: #fff; }
-  .section--dark {
+  .section_dark {
     background-color: #131313;
     background-image: none; }
   .swiper-slide__text {
+    flex-basis: 25%;
     margin-bottom: 2.5rem; }
     .swiper-slide__text:nth-child(odd) {
       margin-right: -7px; }
@@ -929,7 +998,9 @@ p {
   .section-title {
     font-size: 1.222rem; }
   .section-description {
-    max-width: 45rem; } }
+    max-width: 45rem; }
+  .swiper-slide__text {
+    flex-basis: 50%; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -942,6 +1013,8 @@ p {
     font-size: 2.31rem; }
   .hero__scroll-down {
     display: none; }
+    .hero__scroll-down::after {
+      display: none; }
   .hero__content {
     max-width: 90%; }
   .hero__text {

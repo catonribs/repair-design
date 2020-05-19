@@ -438,6 +438,8 @@ p {
         margin-left: 2.5rem; }
     .section-title--left {
       text-align: left; }
+    .section-title--light {
+      color: #fff; }
     .section-title__heading {
       font-weight: normal; }
       .section-title__heading--primary {
@@ -655,6 +657,9 @@ p {
   .title--primary {
     color: #E3B873; }
 
+.projects {
+  padding-bottom: 30rem; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
@@ -721,6 +726,75 @@ p {
   object-fit: cover;
   width: 54.64rem;
   height: 26.92rem; }
+
+.control {
+  margin-bottom: 4.4rem; }
+  .control__section-title {
+    margin-bottom: 2.214rem;
+    margin-top: -30rem; }
+  .control__video {
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-bottom: 4.428rem;
+    max-width: 58.357rem;
+    min-height: 31rem;
+    background: #131313 url("../img/video-mask.jpg") center no-repeat;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+    .control__video::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(19, 19, 19, 0.8); }
+  .control__text {
+    max-width: 40.785rem;
+    margin: auto;
+    margin-bottom: 4.285rem;
+    text-align: center;
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal;
+    font-size: 1.428rem;
+    line-height: 2.428rem; }
+    .control__text::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 1.9rem;
+      width: 55px;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 30px; }
+  .control__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 55rem;
+    margin: auto; }
+  .control__input::placeholder {
+    color: #131313; }
+  .control__label {
+    margin-bottom: -7px;
+    color: #959595; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
+  .control__policy {
+    flex-basis: 100%;
+    margin-top: 1.2rem; }
+    .control__policy-label {
+      justify-content: center; }
+  .control__button {
+    font-family: 'Futura Demi', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 1.1rem 4.2rem; }
+
+.video__play {
+  margin: auto;
+  position: relative; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -980,7 +1054,26 @@ p {
     margin-bottom: 2.8rem;
     padding-left: 0; }
   .col-55 {
-    width: 100%; } }
+    width: 100%; }
+  .control {
+    background-color: #131313;
+    color: #fff; }
+    .control__form {
+      display: flex;
+      flex-direction: column; }
+    .control__input-group {
+      margin-bottom: 5.25rem; }
+      .control__input-group:nth-child(2) {
+        margin-bottom: 2rem; }
+    .control__input::placeholder {
+      color: #fff; }
+    .control__button {
+      order: 5; }
+    .control__policy {
+      margin-top: -1.5rem;
+      margin-bottom: 5rem; }
+      .control__policy-label {
+        justify-content: start; } }
 
 @media screen and (max-width: 768px) {
   .hero__content {
@@ -1027,19 +1120,7 @@ p {
     display: block;
     min-width: 22.8rem;
     margin-right: 0;
-    margin-bottom: 1.85rem; }
-  .image__shadow {
-    position: relative; }
-    .image__shadow::before {
-      content: '';
-      position: absolute;
-      background-color: transparent;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 99%; } }
+    margin-bottom: 1.85rem; } }
 
 @media screen and (max-height: 590px) {
   .hero__scroll-down {
@@ -1105,4 +1186,27 @@ p {
   .types__section-title {
     margin-bottom: 3.3rem; }
   .design__section-title {
-    margin-bottom: 1.4rem; } }
+    margin-bottom: 1.4rem; }
+  .control__video {
+    min-height: 17rem;
+    margin-bottom: 2.35rem; }
+  .control__section-title {
+    margin-bottom: 3.5rem; }
+  .control__text {
+    font-size: 1.17rem;
+    line-height: 169.8%;
+    margin-bottom: 2.6rem; }
+    .control__text::before {
+      margin-bottom: 1.2rem; }
+  .control__label {
+    font-size: 1.25rem; }
+  .control__input {
+    font-size: 1.5rem; }
+    .control__input-group:nth-child(2) {
+      margin-bottom: 2.4rem; }
+  .control__policy {
+    margin-bottom: 5.2rem; }
+    .control__policy-label {
+      font-size: 1.33rem; }
+  .control__button {
+    padding: 1.3rem 4.6rem; } }

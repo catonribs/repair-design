@@ -368,6 +368,14 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+label.invalid {
+  color: red; }
+
+input.invalid {
+  border-bottom: 1px solid red; }
 
 .container {
   width: 90%;
@@ -771,8 +779,10 @@ p {
     flex-wrap: wrap;
     max-width: 55rem;
     margin: auto; }
-  .control__input::placeholder {
+  .control__input {
     color: #131313; }
+    .control__input::placeholder {
+      color: #131313; }
   .control__label {
     margin-bottom: -7px;
     color: #959595; }
@@ -860,7 +870,7 @@ p {
   padding: 1.2rem 0.7rem; }
 
 .design {
-  background-image: linear-gradient(to bottom, white 50%, black 50%); }
+  background-image: linear-gradient(to bottom, white 50%, #131313 50%); }
   .design__pricetag {
     text-align: left;
     padding-left: 2.35rem; }
@@ -915,6 +925,49 @@ p {
   width: 54.64rem;
   height: 26.92rem; }
 
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    padding: 2.5rem;
+    margin-bottom: 3.714rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 37.142rem;
+    margin: auto;
+    justify-content: space-between; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background: #131313;
+    padding: 4.285rem 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -961,10 +1014,12 @@ p {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2.9rem; }
-    .modal__input:last-of-type {
-      margin-bottom: -0.14rem; }
+  .modal__input:last-of-type {
+    margin-bottom: -0.14rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {

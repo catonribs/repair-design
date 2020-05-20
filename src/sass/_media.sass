@@ -125,8 +125,18 @@
       margin-bottom: 5rem
       &-label
         justify-content: start
+
+  #btn-up
+    background: url('../img/btn-up-arrow-small.svg') no-repeat center
+    background-color: $primary
+    width: 25px
+    height: 25px
+    border-radius: 50%
+    bottom: 10px
+    right: 5px
       
-  
+  .button
+    border-radius: 0
 @media screen and ( max-width: 768px )
   .hero
     &__content
@@ -152,13 +162,17 @@
     &-slide      
       &__text  
         flex-basis: 50% 
+  .footer
+    &__section-title
+      font-size: 1rem
+      line-height: 2.09rem
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
       margin-right: 0
       color: $light
       text-decoration: none      
-    &__button
+    &__button      
       display: none
   
   .hero
@@ -182,6 +196,21 @@
       min-width: 22.8rem
       margin-right: 0
       margin-bottom: 1.85rem
+  .control
+    &__text
+      font-size: 1.17rem
+      line-height: 169.8%
+      max-width: 27rem
+  .footer
+    &__form
+      display: flex
+      flex-direction: column
+    &__section-title      
+      max-width: 26rem
+      margin: auto
+  .video__play
+    width: 5.2rem
+
  
 @media screen and ( max-height: 590px )
   .hero
@@ -287,6 +316,54 @@
         font-size: 1.33rem
     &__button
       padding: 1.3rem 4.6rem
+  .footer
+    padding-bottom: 2rem
+    &__title
+      font-size: 1.67rem
+      margin-bottom: 4.5rem
+    &__input
+      font-size: 1.5rem
+      &-group
+        margin-bottom: 5rem
+        &--full-width
+          margin-bottom: 1.7rem
+    &__container
+      display: flex
+      flex-direction: column
+    &__wrap
+      padding: 0
+      margin: 0
+    &__form
+      display: flex
+      flex-direction: column
+    &__button
+      border-radius: 0
+      width: 100%
+      margin: 0 
+      margin-bottom: 4rem
+      font-size: 1.25rem
+      padding: 1.35rem 4rem
+    &__policy
+      display: flex
+      justify-content: start
+      margin-bottom: 5.6rem
+      &__label
+        margin-left: -1rem
+        font-size: 1.35rem
+    &__section-title
+      order: 5
+      max-width: 26rem
+      margin: auto
+      &__heading
+        margin-bottom: 1.8rem
+    &__menu
+      display: none
+    &__map
+      margin: 0
+    &__image
+      &--position
+        margin-left: 9px
+        
 
-  
+
   

@@ -25,7 +25,7 @@
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   font-size: 1.285rem
   color: $light
-  padding: 0.5rem 0 0.6rem
+  padding: 0.4rem 0 0.6rem
   &::placeholder
     color: $light
     opacity: 1
@@ -54,7 +54,21 @@
       justify-content: center
 label
   &.invalid
-    color: red
+    // color: red
 input
   &.invalid
+    color: $light
     border-bottom: 1px solid red
+    margin-bottom: 0
+.invalid
+  color: red
+  margin-bottom: -1rem
+.control__policy > div:nth-child(2)  
+  color: green
+  position: absolute
+  top: 0
+  right: 50px
+  
+.footer__policy > div:nth-child(2)
+
+.modal__policy > div:nth-child(2)

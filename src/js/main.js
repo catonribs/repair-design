@@ -39,10 +39,10 @@ $(document).ready(function () {
       modal.removeClass('modal--visible');
     }
   });
-  $(document).mouseup(function(e) { 
-    if (modal.has(e.target).length === 0) { 
-      modal.removeClass('modal--visible');
-    }
+  $(document).click(function(e) { 
+    if ($(e.target).is(modal)) {
+        $(modal).removeClass('modal--visible');
+  }
     
   });
 
@@ -56,8 +56,7 @@ $(document).ready(function () {
     }
   });
 
-  btn.on('click', function(e) {
-    e.preventDefault();
+  btn.on('click', function(e) {    
     $('html, body').animate({scrollTop:0}, '500');
   });
 
@@ -97,24 +96,32 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },      
-      userPhone: "required",      
+      userPhone: {
+        required: true,
+        minlength: 18        
+      },      
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: 'required'
     },
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не больше 15 букв"
+        minlength: "Имя должно быть не короче 2 букв",
+        maxlength: "Имя должно быть не больше 15 букв"
 
       }, 
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите корректный телефон"      
+      },
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
-      }
+      },
+      policyCheckbox: "Необходимо подтвердить согласие"
     }
   
   });
@@ -127,16 +134,24 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },      
-      userPhone: "required",    
+      userPhone: {
+        required: true,
+        minlength: 18        
+      },
+      policyCheckbox: 'required'     
     },
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не больше 15 букв"
+        minlength: "Имя должно быть не короче 2 букв",
+        maxlength: "Имя должно быть не больше 15 букв"
 
       }, 
-      userPhone: "Заполните поле",      
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите корректный телефон"      
+      },
+      policyCheckbox: "Необходимо подтвердить согласие"
     }
   
   });
@@ -149,22 +164,31 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },      
-      userPhone: "required",   
+      userPhone: {
+        required: true,
+        minlength: 18        
+      },
+      policyCheckbox: 'required'
     },
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не больше 15 букв"
+        minlength: "Имя должно быть не короче 2 букв",
+        maxlength: "Имя должно быть не больше 15 букв"
+
       }, 
-      userPhone: "Заполните поле",      
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите корректный телефон"      
+      },
+      policyCheckbox: "Необходимо подтвердить согласие"
     }
   
   });
 
   // маска для телефона
 
-  $('[type=tel]').mask('+7 (000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+  $('[type=tel]').mask('+7 (000) 00-00-000');
   
 });
 

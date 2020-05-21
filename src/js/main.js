@@ -138,7 +138,8 @@ $(document).ready(function () {
         required: true,
         minlength: 18        
       },
-      policyCheckbox: 'required'     
+      policyCheckbox: 'required',  
+      userQuestion: 'required'   
     },
     messages: {
       userName: {
@@ -151,7 +152,8 @@ $(document).ready(function () {
         required: "Заполните поле",
         minlength: "Введите корректный телефон"      
       },
-      policyCheckbox: "Необходимо подтвердить согласие"
+      policyCheckbox: "Необходимо подтвердить согласие",
+      userQuestion: "Задайте свой вопрос"
     }
   
   });
@@ -189,6 +191,17 @@ $(document).ready(function () {
   // маска для телефона
 
   $('[type=tel]').mask('+7 (000) 00-00-000');
+
+  $(".menu__nav").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
   
 });
 

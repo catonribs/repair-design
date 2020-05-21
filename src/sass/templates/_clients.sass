@@ -1,18 +1,26 @@
 .clients
   background: $light url('../img/clients/clients__bg.jpg') no-repeat center / cover
-  padding-bottom: 30rem
+  padding-bottom: 27.1rem
   &__card
-    background-color: #fff
-    border: 1px solid red
+    background-color: #fff    
     position: relative
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
+    &__title
+      font-size: 1.286rem
+      line-height: 1.643rem
+      margin-top: 0.8rem
+  &__section-title
+    &__image
+      margin-bottom: 1.3rem
   &__section-description
     max-width: 23rem
   &__description
     display: flex
     justify-content: start
-    align-items: center
-    padding: 20px
+    align-items: center    
+    padding-top: 24px
+    padding-left: 20px
+    padding-bottom: 15px
   &__image
     border-radius: 50%
     width: 76px
@@ -21,7 +29,7 @@
   &__text
     padding-left: 20px
     padding-right: 31px
-    padding-bottom: 60px
+    padding-bottom: 70px
     color: $secondary
     font-family: 'Futura Book', sans-serif
     font-weight: normal
@@ -37,10 +45,10 @@
     font-weight: normal
     font-size: 17px
     line-height: 24px
-    text-transform: uppercase
+    text-transform: none    
     color: $light    
     background-color: $primary
-    padding: 10px 20px
+    padding: 0.65rem 1.42rem 0.9rem 1.2rem
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5)
   &__linear
     display: flex
@@ -51,7 +59,7 @@
       width: 32px
       height: 31px
       background: url('../img/clients/client__linear.svg')
-      margin-right: 1rem
+      margin-right: 1.12rem
   &__time
     display: flex
     align-items: center
@@ -61,5 +69,7 @@
       height: 32px
       background: url('../img/clients/client__time.svg')
       margin-right: 1rem
+    &--small
+      padding-right: 1.9rem
 
   

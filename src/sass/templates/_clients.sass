@@ -1,0 +1,65 @@
+.clients
+  background: $light url('../img/clients/clients__bg.jpg') no-repeat center / cover
+  padding-bottom: 30rem
+  &__card
+    background-color: #fff
+    border: 1px solid red
+    position: relative
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
+  &__section-description
+    max-width: 23rem
+  &__description
+    display: flex
+    justify-content: start
+    align-items: center
+    padding: 20px
+  &__image
+    border-radius: 50%
+    width: 76px
+    height: 76px
+    margin-right: 23px
+  &__text
+    padding-left: 20px
+    padding-right: 31px
+    padding-bottom: 60px
+    color: $secondary
+    font-family: 'Futura Book', sans-serif
+    font-weight: normal
+    font-size: 15px
+    line-height: 180%
+  &__info
+    display: flex
+    position: absolute
+    left: 0
+    bottom: -1.928rem
+  &__linear, &__time
+    font-family: 'Yeseva One', cursive    
+    font-weight: normal
+    font-size: 17px
+    line-height: 24px
+    text-transform: uppercase
+    color: $light    
+    background-color: $primary
+    padding: 10px 20px
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5)
+  &__linear
+    display: flex
+    align-items: center
+    margin-right: 1px
+    &::before
+      content: ''
+      width: 32px
+      height: 31px
+      background: url('../img/clients/client__linear.svg')
+      margin-right: 1rem
+  &__time
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      width: 33px
+      height: 32px
+      background: url('../img/clients/client__time.svg')
+      margin-right: 1rem
+
+  

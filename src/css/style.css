@@ -404,8 +404,11 @@ input.invalid {
   align-items: flex-start;
   justify-content: space-between; }
 
-.col-30 {
+.col-32 {
   flex-basis: 32%; }
+
+.col-30 {
+  flex-basis: 30%; }
 
 .col-45 {
   width: 45%;
@@ -948,6 +951,70 @@ p {
   width: 54.64rem;
   height: 26.92rem; }
 
+.clients {
+  background: #fff url("../img/clients/clients__bg.jpg") no-repeat center/cover;
+  padding-bottom: 30rem; }
+  .clients__card {
+    background-color: #fff;
+    border: 1px solid red;
+    position: relative;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
+  .clients__section-description {
+    max-width: 23rem; }
+  .clients__description {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px; }
+  .clients__image {
+    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    margin-right: 23px; }
+  .clients__text {
+    padding-left: 20px;
+    padding-right: 31px;
+    padding-bottom: 60px;
+    color: #959595;
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 180%; }
+  .clients__info {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: -1.928rem; }
+  .clients__linear, .clients__time {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #E3B873;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+  .clients__linear {
+    display: flex;
+    align-items: center;
+    margin-right: 1px; }
+    .clients__linear::before {
+      content: '';
+      width: 32px;
+      height: 31px;
+      background: url("../img/clients/client__linear.svg");
+      margin-right: 1rem; }
+  .clients__time {
+    display: flex;
+    align-items: center; }
+    .clients__time::before {
+      content: '';
+      width: 33px;
+      height: 32px;
+      background: url("../img/clients/client__time.svg");
+      margin-right: 1rem; }
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
@@ -962,11 +1029,12 @@ p {
     background-color: rgba(19, 19, 19, 0.7); }
   .footer__wrap {
     position: relative;
-    background-color: #181818;
+    background: #181818;
     max-width: 63.07rem;
     margin: auto;
     padding: 2.5rem;
-    margin-bottom: 3.5rem; }
+    margin-bottom: 3.5rem;
+    margin-top: -18rem; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;

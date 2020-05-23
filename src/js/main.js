@@ -25,8 +25,24 @@
 
 $(document).ready(function () {
   var modal = $('.modal'),
+      modalThanks = $('.thanks'),
+      closeThanks = $('.thanks__close'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close');
+  
+  closeThanks.on('click', function () {
+    modalThanks.removeClass('thanks--visible');
+  })
+  $(document).keydown(function(e) { 
+    if (event.keyCode == 27) { 
+      modalThanks.removeClass('thanks--visible');
+    }
+  });
+  $(document).click(function(e) { 
+    if ($(e.target).is(modalThanks)) {
+        $(modalThanks).removeClass('thanks--visible');
+    }    
+  });
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -42,8 +58,7 @@ $(document).ready(function () {
   $(document).click(function(e) { 
     if ($(e.target).is(modal)) {
         $(modal).removeClass('modal--visible');
-  }
-    
+    }    
   });
 
   var btn = $('#btn-up');
@@ -122,7 +137,22 @@ $(document).ready(function () {
         email: "Введите корректный email"
       },
       policyCheckbox: "Необходимо подтвердить согласие"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $('.modal__form').serialize(),        
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $('.modal__form')[0].reset();
+          modal.removeClass('modal--visible');
+          modalThanks.addClass('thanks--visible');
+          
+        }
+      });
     }
+  
   
   });
   $('.footer__form').validate({

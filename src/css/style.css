@@ -1166,6 +1166,50 @@ p {
     align-self: flex-end;
     padding: 17px 45px; }
 
+.thanks {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .thanks--visible {
+    opacity: 1;
+    visibility: visible; }
+  .thanks__dialog {
+    position: relative;
+    max-width: 36.14rem;
+    max-height: 36.35rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat;
+    padding: 2.35rem 3.5rem 1.928rem;
+    color: #fff; }
+  .thanks__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url(../img/close.svg) no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .thanks__title {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.357rem;
+    line-height: 1.9rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem; }
+
 @media screen and (max-width: 1274px) {
   .clients__text {
     max-width: 19rem; } }

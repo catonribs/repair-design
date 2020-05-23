@@ -18,14 +18,14 @@ try {
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'youremail@gmail.com';                     // SMTP username
-    $mail->Password   = 'pass';                               // SMTP password
+    $mail->Username   = 'repair.design.lesson26@gmail.com';                     // SMTP username
+    $mail->Password   = 'Xyf59QavCmMcGxE';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('youremail@gmail.com');
-    $mail->addAddress('client@yandex.ru');     // Add a recipient
+    $mail->addAddress('drfgt@yandex.ru');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

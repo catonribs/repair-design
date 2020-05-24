@@ -101,43 +101,47 @@ $(document).ready(function () {
   new WOW().init();
 
   // валидация
-
-  $('.modal__form').validate({
-    errorElement: "div",
-    errorClass: "invalid",
-    rules: {      
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },      
-      userPhone: {
-        required: true,
-        minlength: 18        
-      },      
-      userEmail: {
-        required: true,
-        email: true
+  $('form').each(function() {
+    $(this).validate({
+      errorElement: "div",
+      errorClass: "invalid",
+      rules: {      
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },      
+        userPhone: {
+          required: true,
+          minlength: 18        
+        },      
+        userEmail: {
+          required: true,
+          email: true
+        },
+        userQuestion: {
+          required: true,
+          minlength: 15
+        },
+        policyCheckbox: 'required'
       },
-      policyCheckbox: 'required'
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче 2 букв",
-        maxlength: "Имя должно быть не больше 15 букв"
-
-      }, 
-      userPhone: {
-        required: "Заполните поле",
-        minlength: "Введите корректный телефон"      
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя должно быть не короче 2 букв",
+          maxlength: "Имя должно быть не больше 15 букв"
+        }, 
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Введите корректный телефон"      
+        },
+        userEmail: {
+          required: "Заполните поле",
+          email: "Введите корректный email"
+        },
+        policyCheckbox: "Необходимо подтвердить согласие",
+        userQuestion: "Задайте свой вопрос"
       },
-      userEmail: {
-        required: "Заполните поле",
-        email: "Введите корректный email"
-      },
-      policyCheckbox: "Необходимо подтвердить согласие"
-    },
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
@@ -151,72 +155,72 @@ $(document).ready(function () {
           
         }
       });
-    }
-  
+    }    
+  })  
   
   });
-  $('.footer__form').validate({
-    errorElement: "div",
-    errorClass: "invalid",
-    rules: {      
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },      
-      userPhone: {
-        required: true,
-        minlength: 18        
-      },
-      policyCheckbox: 'required',  
-      userQuestion: 'required'   
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче 2 букв",
-        maxlength: "Имя должно быть не больше 15 букв"
+  // $('.footer__form').validate({
+  //   errorElement: "div",
+  //   errorClass: "invalid",
+  //   rules: {      
+  //     userName: {
+  //       required: true,
+  //       minlength: 2,
+  //       maxlength: 15
+  //     },      
+  //     userPhone: {
+  //       required: true,
+  //       minlength: 18        
+  //     },
+  //     policyCheckbox: 'required',  
+  //     userQuestion: 'required'   
+  //   },
+  //   messages: {
+  //     userName: {
+  //       required: "Заполните поле",
+  //       minlength: "Имя должно быть не короче 2 букв",
+  //       maxlength: "Имя должно быть не больше 15 букв"
 
-      }, 
-      userPhone: {
-        required: "Заполните поле",
-        minlength: "Введите корректный телефон"      
-      },
-      policyCheckbox: "Необходимо подтвердить согласие",
-      userQuestion: "Задайте свой вопрос"
-    }
+  //     }, 
+  //     userPhone: {
+  //       required: "Заполните поле",
+  //       minlength: "Введите корректный телефон"      
+  //     },
+  //     policyCheckbox: "Необходимо подтвердить согласие",
+  //     userQuestion: "Задайте свой вопрос"
+  //   }
   
-  });
-  $('.control__form').validate({
-    errorElement: "div",
-    errorClass: "invalid",
-    rules: {      
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },      
-      userPhone: {
-        required: true,
-        minlength: 18        
-      },
-      policyCheckbox: 'required'
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле",
-        minlength: "Имя должно быть не короче 2 букв",
-        maxlength: "Имя должно быть не больше 15 букв"
+  // });
+  // $('.control__form').validate({
+  //   errorElement: "div",
+  //   errorClass: "invalid",
+  //   rules: {      
+  //     userName: {
+  //       required: true,
+  //       minlength: 2,
+  //       maxlength: 15
+  //     },      
+  //     userPhone: {
+  //       required: true,
+  //       minlength: 18        
+  //     },
+  //     policyCheckbox: 'required'
+  //   },
+  //   messages: {
+  //     userName: {
+  //       required: "Заполните поле",
+  //       minlength: "Имя должно быть не короче 2 букв",
+  //       maxlength: "Имя должно быть не больше 15 букв"
 
-      }, 
-      userPhone: {
-        required: "Заполните поле",
-        minlength: "Введите корректный телефон"      
-      },
-      policyCheckbox: "Необходимо подтвердить согласие"
-    }
+  //     }, 
+  //     userPhone: {
+  //       required: "Заполните поле",
+  //       minlength: "Введите корректный телефон"      
+  //     },
+  //     policyCheckbox: "Необходимо подтвердить согласие"
+  //   }
   
-  });
+  // });
 
   // маска для телефона
 

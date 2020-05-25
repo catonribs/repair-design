@@ -168,6 +168,24 @@
   .control__policy > div:nth-child(2)  
     top: 40px
     left: 0 
+  
+
+  .team
+    background-image: none
+    background-color: $dark
+    margin-bottom: 0
+    &__section
+      &-title
+        color: $light
+      &-description
+        max-width: 31rem
+    &__about
+      display: none
+    &__image
+      &-wrap
+        &--first, &--second, &--third
+          &::before              
+            left: -35px
     
   .clients
     display: none
@@ -182,9 +200,7 @@
       margin: auto  
     &__text
       max-width: 37rem
-  .row
-    flex-direction: column
-    align-items: center
+  
   .types, .design
     &__card
       margin-bottom: 6.5rem
@@ -204,6 +220,10 @@
     &__section-title
       font-size: 1rem
       line-height: 2.09rem
+  .team
+    &__section
+      &-description
+        max-width: 31rem
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
@@ -412,6 +432,57 @@
     top: 20px
     left: 0
   
+  .team
+    background-image: none
+    background-color: $dark
+    margin-bottom: 0
+    &__row  
+      align-items: end
+    &__card
+      margin-bottom: 7.4rem
+    &__section
+      &-title
+        color: $light
+      &-heading
+        margin: 0
+        margin-bottom: 1.15rem
+      &-image
+        margin-bottom: 1.6rem
+      &-description
+        max-width: 27rem
+        margin-bottom: 6.8rem
+    &__about
+      display: none
+    &__image
+      &--deck
+        display: none
+      &--mob
+        display: block
+      &-wrap
+        justify-content: end
+        &--first, &--second, &--third
+          &::before              
+            left: -35px
+    &__description
+      margin-top: -6.685rem
+      margin-right: 3.35rem
+      max-width: 19.416rem
+    &__name
+      font-size: 1.5rem
+      line-height: 1.389rem   
+      padding-top: 2rem
+      margin-bottom: 0.9rem 
+    &__profession    
+      font-size: 1.5rem
+      line-height: 1.444rem
+      margin-bottom: 2rem        
+    &__exp
+      font-size: 1.084rem
+      line-height: 1.667rem
+      padding-top: 0.9rem
+      padding-bottom: 1.1rem
+          
+      
         
 
 

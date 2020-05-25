@@ -16,11 +16,11 @@
       <div class="menu">
         <a href="../index.html" class="logo menu__logo wow fadeInLeft">Repair Design Project</a>
         <nav class="nav menu__nav">
-          <a href="#main__page" class="nav__item">Главная</a>
-          <a href="#finished__projects" class="nav__item">Проекты</a>
+          <a href="#page" class="nav__item">Главная</a>
+          <a href="#projects" class="nav__item">Проекты</a>
           <a href="#" class="nav__item">Замер</a>
-          <a href="#" class="nav__item">Команда</a>
-          <a href="#" class="nav__item">Отзывы</a>
+          <a href="#team" class="nav__item">Команда</a>
+          <a href="#clients" class="nav__item">Отзывы</a>
           <a href="#contacts" class="nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
@@ -32,7 +32,7 @@
     <!-- /.container -->
   </header>
   <main>
-    <section class="hero" id="main__page">
+    <section class="hero" id="page">
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
@@ -48,10 +48,10 @@
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down wow pulse" data-wow-delay="3.5s" data-wow-iteration="6">Листайте вниз</a>
+      <a href="#projects" class="hero__scroll-down wow pulse" data-wow-delay="3.5s" data-wow-iteration="6">Листайте вниз</a>
     </section>
     <!-- /.hero -->
-    <section class="section section_dark projects" id="finished__projects">
+    <section class="section section_dark projects" id="projects">
       <div class="container">
         <div class="row">
           <div class="col-45">
@@ -443,12 +443,12 @@
       <!-- /.container -->
     </section>
     <!-- /.section design -->
-    <section class="section team">
+    <section class="section team" id="team">
       <div class="container">
         <div class="section-title team__section-title">
-          <h2 class="section-title__heading wow zoomIn">Наша команда</h2>
+          <h2 class="section-title__heading team__section-heading wow zoomIn">Наша команда</h2>
           <!-- /.section-title__heading -->
-          <div class="section-title__image team__section-title__image">
+          <div class="section-title__image team__section-image">
             <img src="img/team/team-logo.svg" alt="team-logo">
           </div>
           <!-- /.section-title__image -->
@@ -458,11 +458,12 @@
           <!-- /.section-description -->
         </div>
         <!-- /.section-title -->
-        <div class="row">
+        <div class="row team__row">
           <div class="col-32">
             <div class="card team__card wow slideInUp" data-wow-delay="0.1s">
-              <div class="team__image-wrap">
-                <img src="img/team/team-1-d.png" alt="team__1" class="team__image">   
+              <div class="team__image-wrap team__image-wrap--first">
+                <img src="img/team/team-1-d.png" alt="team__1" class="team__image team__image--deck">   
+                <img src="img/team/team-1.png" alt="team__1" class="team__image team__image--mob">   
               </div>
               <div class="team__description">
                 <span class="team__name">
@@ -483,8 +484,9 @@
           <!-- /.col -->
           <div class="col-32">
             <div class="card team__card wow slideInUp" data-wow-delay="0.1s">
-              <div class="team__image-wrap">
-                <img src="img/team/team-2-d.png" alt="team__1" class="team__image">   
+              <div class="team__image-wrap team__image-wrap--second">
+                <img src="img/team/team-2-d.png" alt="team__2" class="team__image team__image--deck">   
+                <img src="img/team/team-2.png" alt="team__2" class="team__image team__image--mob">   
               </div>
               <div class="team__description">
                 <span class="team__name">
@@ -505,8 +507,9 @@
           <!-- /.col -->
           <div class="col-32">
             <div class="card team__card wow slideInUp" data-wow-delay="0.1s">
-              <div class="team__image-wrap">
-                <img src="img/team/team-3.png" alt="team__1" class="team__image">   
+              <div class="team__image-wrap team__image-wrap--third">
+                <img src="img/team/team-3-d.png" alt="team__3" class="team__image team__image--deck">   
+                <img src="img/team/team-3.png" alt="team__3" class="team__image team__image--mob">   
               </div>
               <div class="team__description">
                 <span class="team__name">
@@ -537,7 +540,7 @@
       <!-- /.container -->
     </section>
     <!-- /.section clients -->
-    <section class="section clients">
+    <section class="section clients" id="clients">
       <div class="container">
         <div class="section-title clients__section-title">
           <h2 class="section-title__heading wow zoomIn">Наши клиенты</h2>

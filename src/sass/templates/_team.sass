@@ -1,51 +1,110 @@
 .team
   background: $light url('../img/clients/clients__bg.jpg') no-repeat center / cover
-  padding-bottom: 27.1rem
+  margin-bottom: 0.8rem  
+  &__section
+    &-description
+      max-width: 31rem 
+      margin-bottom: 5.8rem
+      color: $dark
+    &-image
+      margin-bottom: 1.25rem 
   &__card    
-    margin-bottom: 100px
-    // position: relative
-  &__description
-    // position: absolute
+    margin-bottom: 4.5rem   
+  &__description    
+    position: relative
     display: flex
     flex-direction: column
-    background-color: red
-    // margin: auto
+    background-color: $light
+    margin: auto
+    max-width: 16.642rem
+    margin-top: -5.785rem
   &__name
     font-family: 'Yeseva One', cursive    
     font-weight: normal
-    font-size: 18px
-    line-height: 25px
+    font-size: 1.285rem
+    line-height: 1.785rem
     text-align: center
+    padding-top: 1.428rem
   &__profession
     font-family: 'Futura Book', sans-serif   
     font-weight: normal
-    font-size: 18px
-    line-height: 26px
+    font-size: 1.285rem
+    line-height: 1.857rem
     text-align: center
     color: $secondary
+    margin-bottom: 1.571rem
   &__exp
     font-family: 'Yeseva One', cursive    
     font-weight: normal
-    font-size: 13px
-    line-height: 20px
+    font-size: 0.928rem
+    line-height: 1.428rem
     text-align: center
     text-transform: uppercase
     background-color: $primary
     color: $light
+    padding-top: 0.785rem
+    padding-bottom: 0.928rem
 
-  &__image
+  &__image                  
+    &--mob
+      display: none
     &-wrap
       display: flex
       justify-content: center
       align-items: center
+      position: relative
+      &--first
+        &::before
+          position: absolute
+          left: 29px
+          top: -35px
+          content: ''
+          width: 70px
+          height: 70px
+          background: url('../img/team/idea.svg') no-repeat center
+          background-color: $primary
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5)
+      &--second
+        &::before
+          position: absolute
+          left: 29px
+          top: -35px
+          content: ''
+          width: 70px
+          height: 70px
+          background: url('../img/team/pen.svg') no-repeat center
+          background-color: $primary
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5)
+      &--third
+        &::before
+          position: absolute
+          left: 29px
+          top: -35px
+          content: ''
+          width: 70px
+          height: 70px
+          background: url('../img/team/portfolio.svg') no-repeat center
+          background-color: $primary
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5)
     
   &__about    
-    max-width: 568px
+    max-width: 40.571rem
     font-family: 'Futura Book', sans-serif
     font-weight: normal
-    font-size: 20px
-    line-height: 34px
+    font-size: 1.428rem
+    line-height: 2.428rem
     text-align: center
     margin: auto
- 
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: -10px
+      left: 256px      
+      width: 55px
+      height: 2px
+      background-color: $primary
       
+ 
+
+  

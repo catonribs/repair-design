@@ -113,7 +113,7 @@ $(document).ready(function () {
         },      
         userPhone: {
           required: true,
-          minlength: 18        
+          minlength: 16        
         },      
         userEmail: {
           required: true,
@@ -121,7 +121,7 @@ $(document).ready(function () {
         },
         userQuestion: {
           required: true,
-          minlength: 15
+          minlength: 3
         },
         policyCheckbox: 'required'
       },
@@ -223,7 +223,7 @@ $(document).ready(function () {
 
   // маска для телефона
 
-  $('[type=tel]').mask('+7 (000) 00-00-000');
+  $('[type=tel]').mask('+7(000)000-00-00');
 
   $(".menu__nav").on("click","a", function (event) {
 		//отменяем стандартную обработку нажатия по ссылке
@@ -234,6 +234,17 @@ $(document).ready(function () {
 			top = $(id).offset().top;		
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1500);
+  });
+  
+  $(".hero__scroll-down").on("click", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 3000);
 	});
   
 });

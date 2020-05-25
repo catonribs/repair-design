@@ -766,7 +766,7 @@ p {
   margin-bottom: 4.4rem; }
   .control__section-title {
     margin-bottom: 2.214rem;
-    margin-top: -30rem; }
+    margin-top: -27.6rem; }
   .control__video {
     position: relative;
     display: flex;
@@ -954,6 +954,50 @@ p {
   object-fit: cover;
   width: 54.64rem;
   height: 26.92rem; }
+
+.team {
+  background: #fff url("../img/clients/clients__bg.jpg") no-repeat center/cover;
+  padding-bottom: 27.1rem; }
+  .team__card {
+    margin-bottom: 100px; }
+  .team__description {
+    display: flex;
+    flex-direction: column;
+    background-color: red; }
+  .team__name {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center; }
+  .team__profession {
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #959595; }
+  .team__exp {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #fff; }
+  .team__image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .team__about {
+    max-width: 568px;
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    margin: auto; }
 
 .clients {
   background: #fff url("../img/clients/clients__bg.jpg") no-repeat center/cover;
@@ -1239,9 +1283,12 @@ p {
     font-size: 1rem;
     max-width: 23rem; }
   .clients__linear, .clients__time {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .clients__title {
+    font-size: 1rem;
+    padding-right: 10px; } }
 
-@media screen and (max-width: 1016px) {
+@media screen and (max-width: 1030px) {
   .clients__text {
     max-width: 18rem; } }
 

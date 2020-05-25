@@ -146,13 +146,12 @@ $(document).ready(function () {
       $.ajax({
         type: "POST",
         url: "send.php",
-        data: $('.modal__form').serialize(),        
+        data: $(form).serialize(),        
         success: function (response) {
           console.log('Ajax сработал. Ответ сервера: ' + response);
-          $('.modal__form')[0].reset();
+          $(form)[0].reset();
           modal.removeClass('modal--visible');
-          modalThanks.addClass('thanks--visible');
-          
+          modalThanks.addClass('thanks--visible');          
         }
       });
     }    

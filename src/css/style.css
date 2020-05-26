@@ -404,10 +404,6 @@ input.invalid {
   position: absolute;
   top: 35px; }
 
-.link-on-vk {
-  color: #E3B873;
-  text-decoration: none; }
-
 .container {
   width: 90%;
   max-width: 1256px;
@@ -1193,11 +1189,11 @@ p {
     background: #131313;
     padding: 3.2rem 0; }
   .footer__map {
-    max-width: 66.07rem;
-    margin: auto;
+    position: relative;
     margin-bottom: 4.7rem;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1); }
+    width: 66.0714rem;
+    height: 33.2143rem;
+    z-index: 20; }
   .footer__section-title {
     position: relative;
     color: #E3B873;
@@ -1213,8 +1209,72 @@ p {
     margin-right: 7px;
     margin-left: 4px; }
 
-#footer__map {
-  height: 33.214rem; }
+.ymaps-2-1-76-map {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+.ymap-container {
+  position: relative;
+  background: url("../img/map-load-bg.jpg") no-repeat center/cover;
+  max-width: 925px;
+  max-height: 465px;
+  margin: auto;
+  cursor: pointer; }
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.55); }
+
+.loader.is-active {
+  top: 0;
+  opacity: 1; }
+
+.loader-default::after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  -webkit-animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%; }
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(359deg); } }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
 
 .modal {
   opacity: 0;
@@ -1540,7 +1600,7 @@ p {
     margin: auto; }
   .video__play {
     width: 5.2rem; }
-  #footer__map {
+  .footer__map {
     height: 21.25rem; }
   .footer__policy > div:nth-child(2) {
     top: 40px;

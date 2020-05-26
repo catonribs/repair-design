@@ -958,6 +958,9 @@ p {
 .team {
   background: #fff url("../img/clients/clients__bg.jpg") no-repeat center/cover;
   margin-bottom: 0.8rem; }
+  .team__row {
+    max-width: 1110px;
+    margin: auto; }
   .team__section-description {
     max-width: 31rem;
     margin-bottom: 5.8rem;
@@ -965,7 +968,11 @@ p {
   .team__section-image {
     margin-bottom: 1.25rem; }
   .team__card {
-    margin-bottom: 4.5rem; }
+    margin: auto;
+    margin-bottom: 4.5rem;
+    position: relative;
+    max-width: 273px;
+    min-height: 357px; }
   .team__description {
     position: relative;
     display: flex;
@@ -1000,43 +1007,23 @@ p {
     color: #fff;
     padding-top: 0.785rem;
     padding-bottom: 0.928rem; }
+  .team__logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -35px;
+    top: -35px;
+    content: '';
+    width: 70px;
+    height: 70px;
+    background-color: #E3B873;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
   .team__image--mob {
     display: none; }
   .team__image-wrap {
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative; }
-    .team__image-wrap--first::before {
-      position: absolute;
-      left: 29px;
-      top: -35px;
-      content: '';
-      width: 70px;
-      height: 70px;
-      background: url("../img/team/idea.svg") no-repeat center;
-      background-color: #E3B873;
-      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
-    .team__image-wrap--second::before {
-      position: absolute;
-      left: 29px;
-      top: -35px;
-      content: '';
-      width: 70px;
-      height: 70px;
-      background: url("../img/team/pen.svg") no-repeat center;
-      background-color: #E3B873;
-      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
-    .team__image-wrap--third::before {
-      position: absolute;
-      left: 29px;
-      top: -35px;
-      content: '';
-      width: 70px;
-      height: 70px;
-      background: url("../img/team/portfolio.svg") no-repeat center;
-      background-color: #E3B873;
-      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    align-items: center; }
   .team__about {
     max-width: 40.571rem;
     font-family: 'Futura Book', sans-serif;
@@ -1680,6 +1667,7 @@ p {
     .team__row {
       align-items: end; }
     .team__card {
+      max-width: 100%;
       margin-bottom: 7.4rem; }
     .team__section-title {
       color: #fff; }
@@ -1699,8 +1687,6 @@ p {
       display: block; }
     .team__image-wrap {
       justify-content: end; }
-      .team__image-wrap--first::before, .team__image-wrap--second::before, .team__image-wrap--third::before {
-        left: -35px; }
     .team__description {
       margin-top: -6.685rem;
       margin-right: 3.35rem;
@@ -1719,3 +1705,7 @@ p {
       line-height: 1.667rem;
       padding-top: 0.9rem;
       padding-bottom: 1.1rem; } }
+
+@media screen and (max-width: 358px) {
+  .team__logo {
+    display: none; } }

@@ -1,8 +1,8 @@
 const {src, dest, watch} = require("gulp");
 const browserSync = require("browser-sync").create();
+const sass = require("gulp-sass");
 const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
 const autoprefixer = require('gulp-autoprefixer');
 
 // Static server

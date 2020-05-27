@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   var modal = $('.modal'),
       modalThanks = $('.thanks'),
@@ -47,7 +48,7 @@ $(document).ready(function () {
   });
 
   btn.on('click', function(e) {    
-    $('html, body').animate({scrollTop:0}, '500');
+    $('html, body').animate({scrollTop:0}, 2000);
   });
 
   
@@ -126,8 +127,7 @@ $(document).ready(function () {
           console.log('Ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
           modal.removeClass('modal--visible');
-          modalThanks.addClass('thanks--visible');
-          ym('64405807', 'reachGoal', 'submit'); return true;          
+          modalThanks.addClass('thanks--visible');                   
         }
       });
     }    
@@ -135,21 +135,11 @@ $(document).ready(function () {
   
   });
   
-
+  
   // маска для телефона
 
   $('[type=tel]').mask('+7(000)000-00-00');
-
-  $(".menu__nav").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1500);
-  });
+  
   
   $(".hero__scroll-down").on("click", function (event) {
 		//отменяем стандартную обработку нажатия по ссылке
@@ -162,43 +152,63 @@ $(document).ready(function () {
 		$('body,html').animate({scrollTop: top}, 2000);
 	});
   
+  const link = $('.nav__item');
 
-  let spinner = $('.ymap-container').children('.loader');
-
-  let check_if_load = false;
+  link.on('click', (e) => {
+    event.preventDefault();
+    var target = $(e.target).attr('href')
+    $('body,html').animate({
+      scrollTop: $(target).offset().top - 60
+      }, 1700);
+    return false;
+  });
   
+  //Ymap start
+  var spinner = $('.ymap-container').children('.loader');
+  var check_if_load = 0;
+  var myMapTemp, myPlacemarkTemp;
+
+
   function init () {
-    let myMap = new ymaps.Map('map-yandex', {
-        center: [47.244729, 39.723187],
-        zoom: 18
-        
-    }, {
-        searchControlProvider: 'yandex#search'
-    }),
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    var myMapTemp = new ymaps.Map("map-yandex", {
+      center: [47.244729, 39.723187],
+      zoom: 18,
+      }, {
+      searchControlProvider: 'yandex#search'
+    });
+
+    var myPlacemarkTemp = new ymaps.Placemark([47.244729, 39.723187], {
         hintContent: 'Наш офис',
-        balloonContent: 'Вход со двора'
-    }, {
-        iconLayout: 'default#image',
-        iconImageHref: '../img/marker.png',
+        balloonContent: "Офис на 3 этаже",
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: './img/marker.png',
+        // Размеры метки.
         iconImageSize: [32, 32],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
         iconImageOffset: [-5, -38],
     });
-    myMap.behaviors.disable('scrollZoom');
-    myMap.geoObjects.add(myPlacemark);
-    let layer = myMapTemp.layers.get(0).get(0);
 
+    myMapTemp.geoObjects.add(myPlacemarkTemp);
+    myMapTemp.behaviors.disable('scrollZoom');
+
+    //Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
+    var layer = myMapTemp.layers.get(0).get(0);
+
+    //Решение по callback-у для определния полной загрузки карты: http://ru.stackoverflow.com/questions/463638/callback-загрузки-карты-yandex-map
     waitForTilesLoad(layer).then(function() {
+      //Скрываем
       spinner.removeClass('is-active');
     });
   }
-  
+
   function waitForTilesLoad(layer) {
     return new ymaps.vow.Promise(function (resolve, reject) {
-      let tc = getTileContainer(layer), readyAll = true;
+      var tc = getTileContainer(layer), readyAll = true;
       tc.tiles.each(function (tile, number) {
         if (!tile.isReady()) {
           readyAll = false;
@@ -213,9 +223,9 @@ $(document).ready(function () {
       }
     });
   }
-  
+
   function getTileContainer(layer) {
-    for (let k in layer) {
+    for (var k in layer) {
       if (layer.hasOwnProperty(k)) {
         if (
           layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
@@ -227,33 +237,58 @@ $(document).ready(function () {
     }
     return null;
   }
-  
-  function loadScript(url, callback) {
-    let script = document.createElement("script");
-      script.onload = function() {
+
+  function loadScript(url, callback){
+
+    var script = document.createElement("script");
+
+    if (script.readyState){  //IE
+      script.onreadystatechange = function(){
+        if (script.readyState === "loaded" ||
+                script.readyState === "complete"){
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+      } else {  //Другие браузеры
+      script.onload = function(){
         callback();
       };
+    }
+
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
   }
 
-  let ymap = function() {
-    $('.ymap-container').mouseenter(function() {
-        if (!check_if_load) { 
-          check_if_load = true; 
+  
+  var ymap = function() {
+    $('.ymap-container').mouseenter(function(){
+        if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+   
+        // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+          check_if_load = true;
+   
+      // Показываем индикатор загрузки до тех пор, пока карта не загрузится
           spinner.addClass('is-active');
-          loadScript("https://api-maps.yandex.ru/2.1/?apikey=13f8ea71-6bcc-4838-815f-071cede50f78&lang=ru_RU", function() {
-            ymaps.load(init);
+   
+      // Загружаем API Яндекс.Карт
+          loadScript("https://api-maps.yandex.ru/2.1/?apikey=13f8ea71-6bcc-4838-815f-071cede50f78&lang=ru_RU", function(){
+             // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+             ymaps.load(init);
           });                
         }
       }
     );  
   }
-  
+   
   $(function() {
+   
+    //Запускаем основную функцию
     ymap();
+   
   });
 
+  
 
   $('.control__video').one('mouseenter', () => {
     $( "<script src=\"https://www.youtube.com/iframe_api\"></script>" ).appendTo( ".control__video" );
@@ -275,5 +310,8 @@ $(document).ready(function () {
   function videoPlay(event) {
     event.target.playVideo();
   }
+
+
+  
 });
 

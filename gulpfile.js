@@ -36,6 +36,7 @@ function buildCss(done) {
   src('src/css/**/**.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(dest('dist/css/'));
+  src('src/css/**.min.css').pipe(dest('dist/css/'));
   done();
 }
 

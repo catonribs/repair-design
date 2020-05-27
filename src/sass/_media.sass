@@ -266,9 +266,9 @@
       margin-bottom: 1.85rem
   .control
     &__text
-      font-size: 1.17rem
+      font-size: 1.167rem
       line-height: 169.8%
-      max-width: 27rem
+      
   .footer
     &__form
       display: flex
@@ -293,7 +293,7 @@
 @media screen and ( max-width: 375px )
   .hero    
     &__title      
-      font-size: 1.91rem
+      font-size: 1.916rem
       margin-bottom: 1.1rem
     &__content            
       min-width: 100%
@@ -303,14 +303,14 @@
       line-height: 135%
       margin-bottom: 2.8rem
     &__button      
-      min-width: 100%
+      min-width: 99.5%
       margin-bottom: 2.2rem   
   .card
     &__title
       font-size: 1.25rem
     &__text
       max-width: 22.6rem
-      padding: 1.79rem 2.14rem
+      padding: 1.79rem 2.64rem
       margin-top: -12rem
       margin-left: 0                    
     &__list      
@@ -322,7 +322,8 @@
       min-width: 15.87rem
       min-height: 3.33rem
       text-align: center
-      padding: 1rem 0     
+      padding: 1rem 0
+      bottom: -1.6rem   
         
   .design    
     &__pricetag
@@ -358,29 +359,35 @@
       &__value
         font-size: 1.167rem
         line-height: 135%
-
+  div.swiper-container:nth-child(1), .col-55
+    max-height: 16.8333rem
   .types
+    padding: 5px 0
     &__section-title
       margin-bottom: 3.3rem 
   .design
     &__section-title      
       margin-bottom: 1.4rem
   .control
+    margin-bottom: 0
     &__video
       min-height: 17rem
       margin-bottom: 2.35rem
     &__section-title
       margin-bottom: 3.5rem
-    &__text
-      font-size: 1.17rem
-      line-height: 169.8%
-      margin-bottom: 2.6rem
+      margin-top: -30.2rem
+    &__text      
+      margin-bottom: 2.4rem
       &::before
-        margin-bottom: 1.2rem
+        margin-bottom: 1.3rem
     &__label
       font-size: 1.25rem
     &__input
       font-size: 1.5rem
+      padding: 0.7rem 0 0.55rem
+      border-bottom: 1px solid rgba(255, 255, 255, 0.9)
+      &-group
+        margin-bottom: 5.05rem
       &-group:nth-child(2)
         margin-bottom: 2.4rem
     &__policy
@@ -397,7 +404,7 @@
     &__input
       font-size: 1.5rem
       &-group
-        margin-bottom: 5rem
+        margin-bottom: 5.4rem
         &--full-width
           margin-bottom: 1.7rem
     &__container
@@ -423,10 +430,13 @@
       &__label
         margin-left: -1rem
         font-size: 1.35rem
-    &__section-title
-      order: 5
-      max-width: 26rem
-      margin: auto
+    &__section
+      &-image
+        margin-bottom: 0
+      &-title
+        order: 5
+        max-width: 26rem
+        margin: auto
       &__heading
         margin-bottom: 1.8rem
     &__menu
@@ -490,6 +500,15 @@
       line-height: 1.667rem
       padding-top: 0.9rem
       padding-bottom: 1.1rem
+  .section-title
+    // &__heading
+    //   margin-bottom: 1.65rem
+    &__word
+      margin-bottom: 2rem
+  .container
+    width: 91%
+  .ymap-container
+    margin-bottom: 2rem
           
       
 @media screen and ( max-width: 358px )  

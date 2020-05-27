@@ -57,7 +57,7 @@ function htmlMin(done) {
 }
 
 function php(done) {
-  src(['**.php'])    
+  src(['src/**.php'])    
     .pipe(dest('dist/'));
   src('src/phpmailer/**/**')
     .pipe(dest('dist/phpmailer/'));

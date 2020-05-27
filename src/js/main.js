@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   var modal = $('.modal'),
       modalThanks = $('.thanks'),
@@ -127,7 +126,8 @@ $(document).ready(function () {
           console.log('Ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
           modal.removeClass('modal--visible');
-          modalThanks.addClass('thanks--visible');          
+          modalThanks.addClass('thanks--visible');
+          ym('64405807', 'reachGoal', 'submit'); return true;          
         }
       });
     }    
@@ -163,47 +163,15 @@ $(document).ready(function () {
 	});
   
 
-  
-  // ymaps.ready(function () {
-  //   var myMap = new ymaps.Map('footer__map', {
-  //           center: [47.244729, 39.723187],
-  //           zoom: 18
-  //       }, {
-  //           searchControlProvider: 'yandex#search'
-  //       }),
-
-  //       // Создаём макет содержимого.
-  //       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-  //           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  //       ),
-
-  //       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //           hintContent: 'Наш офис',
-  //           balloonContent: 'Вход со двора'
-  //       }, {
-  //           // Опции.
-  //           // Необходимо указать данный тип макета.
-  //           iconLayout: 'default#image',
-  //           // Своё изображение иконки метки.
-  //           iconImageHref: 'img/marker.png',
-  //           // Размеры метки.
-  //           iconImageSize: [32, 32],
-  //           // Смещение левого верхнего угла иконки относительно
-  //           // её "ножки" (точки привязки).
-  //           iconImageOffset: [-5, -38]
-  //       });
-
-  //   myMap.geoObjects
-  //       .add(myPlacemark);        
-  // });
   let spinner = $('.ymap-container').children('.loader');
 
   let check_if_load = false;
-
+  
   function init () {
     let myMap = new ymaps.Map('map-yandex', {
         center: [47.244729, 39.723187],
         zoom: 18
+        
     }, {
         searchControlProvider: 'yandex#search'
     }),
@@ -219,6 +187,7 @@ $(document).ready(function () {
         iconImageSize: [32, 32],
         iconImageOffset: [-5, -38],
     });
+    myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
     let layer = myMapTemp.layers.get(0).get(0);
 
@@ -273,7 +242,7 @@ $(document).ready(function () {
         if (!check_if_load) { 
           check_if_load = true; 
           spinner.addClass('is-active');
-          loadScript("https://api-maps.yandex.ru/2.1/?apikey=a00f0ba8-875e-472d-9d6e-105c41b610b1&lang=ru_RU", function() {
+          loadScript("https://api-maps.yandex.ru/2.1/?apikey=13f8ea71-6bcc-4838-815f-071cede50f78&lang=ru_RU", function() {
             ymaps.load(init);
           });                
         }
@@ -284,5 +253,27 @@ $(document).ready(function () {
   $(function() {
     ymap();
   });
+
+
+  $('.control__video').one('mouseenter', () => {
+    $( "<script src=\"https://www.youtube.com/iframe_api\"></script>" ).appendTo( ".control__video" );
+  });
+
+  var player;
+  
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'EHfFzi9muK4',
+          events: {
+              'onReady': videoPlay,
+            }
+          });
+        })
+        
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 });
 

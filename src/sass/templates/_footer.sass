@@ -10,10 +10,10 @@
     left: 0
     width: 100%
     height: 100%
-    background-color: rgba($dark, 0.7)
+    background-color: rgba($dark, 0.9)
   &__wrap
     position: relative
-    background: $black    
+    background: $black url('../img/footer-form.svg') no-repeat center/cover  
     max-width: 63.07rem
     margin: auto
     padding: 2.5rem
@@ -74,12 +74,20 @@
     &-image
       margin-bottom: 2.5rem
   &__image
+    &-mail
+      background: $primary     
     &--position
       width: 28px
       height: 28px
       margin-right: 7px
       margin-left: 4px
-
+  &__phone
+    text-decoration: none
+    font-family: 'Yeseva One', cursive   
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px    
+    text-transform: uppercase
 
 .ymaps-2-1-76-map 
   -webkit-filter: grayscale(100%)

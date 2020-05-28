@@ -1,7 +1,13 @@
-@media screen and ( max-width: 1274px )
+@media screen and ( max-width: 1364px )
   .clients
     &__text
-      max-width: 19rem
+      padding-left: 25px
+      padding-right: 25px
+      max-width: 21rem
+// @media screen and ( max-width: 1274px )
+//   .clients
+//     &__text
+//       max-width: 19rem
 
 @media screen and ( max-width: 1256px )
   .swiper
@@ -28,17 +34,23 @@
   .clients
     &__text
       font-size: 1rem
-      max-width: 23rem      
+      max-width: 25rem
+      padding-left: 15px
+      padding-right: 25px           
     &__linear, &__time
       font-size: 1rem
     &__title
       font-size: 1rem
       padding-right: 10px
+  .col-32
+    flex-basis: 30%
 
-@media screen and ( max-width: 1030px )
+@media screen and ( max-width: 1090px )
   .clients
     &__text      
-      max-width: 18rem 
+      max-width: 21rem 
+      padding-left: 21px
+      padding-right: 35px
   
 
 @media screen and ( min-width: 992px )
@@ -90,6 +102,9 @@
     
 
 @media screen and ( max-width: 992px )
+  .col-33
+    max-width: 100%
+    margin: auto
   .nav
     display: none
   .hero
@@ -104,7 +119,7 @@
     &__card
       margin-bottom: 5rem
   .design    
-    background-image: linear-gradient(to bottom, black 50%, black 50%)  
+    background-image: linear-gradient(to bottom, $dark 50%, $dark 50%)  
     &__section-title
       color: $light
   .section   
@@ -183,11 +198,11 @@
         max-width: 31rem
     &__about
       display: none
-    &__image
-      &-wrap
-        &--first, &--second, &--third
-          &::before              
-            left: -35px
+    &__content
+      padding-top: 35px
+      padding-left: 35px
+      margin-bottom: 4.45rem    
+    
     
   .clients
     display: none
@@ -197,6 +212,7 @@
       width: 100%
     &__wrap
       margin-top: 0
+      background: $dark
 
   .ymaps-2-1-76-map
     width: 100%
@@ -234,6 +250,8 @@
     &__section
       &-description
         max-width: 31rem
+  
+    
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
@@ -247,27 +265,31 @@
     &::after
       display: none
     &__title
-      font-size: 2.31rem
+      font-size: 2.31rem    
       
     &__scroll-down
       display: none
       &::after
         display: none
     &__content      
-      max-width: 90%
+      max-width: 95%
     &__text
       max-width: 330px
       font-size: 1.4rem
       margin-bottom: 2.28rem
     &__button
       display: block
-      min-width: 22.8rem
+      min-width: 100%
       margin-right: 0
       margin-bottom: 1.85rem
   .control
     &__text
       font-size: 1.167rem
       line-height: 169.8%
+      max-width: 28.333rem
+    &__video
+      min-height: 17rem
+  
       
   .footer
     &__form
@@ -281,15 +303,44 @@
   .footer__map
     height: 21.25rem
   .footer__policy > div:nth-child(2)    
-    top: 40px
+    top: 35px
     left: 0
-
+  .policy__label--center
+    justify-content: start
+    
+  .image-shadow::before
+    display: none
  
+
 @media screen and ( max-height: 590px )
   .hero
     &__scroll-down
       display: none
 
+@media screen and ( max-height: 465px )
+  .modal
+    &__dialog
+      max-width: 570px
+      height: 310px
+    &__form
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+    &__input
+      &-group
+        &:first-child
+          width: 45%
+        &:nth-child(2)
+          width: 45%
+        &:nth-child(3)          
+          width: 100%
+          margin-bottom: 6px
+    &__policy
+      margin-bottom: 3.585rem
+  .thanks
+    &__block
+      max-width: 570px
+      height: 310px      
 @media screen and ( max-width: 375px )
   .hero    
     &__title      
@@ -410,6 +461,7 @@
     &__container
       display: flex
       flex-direction: column
+      margin-top: -4rem
     &__wrap
       padding: 0
       margin: 0
@@ -452,6 +504,7 @@
     top: 20px
     left: 0
   
+  
   .team
     background-image: none
     background-color: $dark
@@ -460,7 +513,7 @@
       align-items: end
     &__card
       max-width: 100%
-      margin-bottom: 7.4rem
+      
     &__section
       &-title
         color: $light
@@ -483,8 +536,8 @@
         justify-content: end
         
     &__description
-      margin-top: -6.685rem
-      margin-right: 3.35rem
+      margin-top: -6.6rem
+      margin-right: 3.3rem
       max-width: 19.416rem
     &__name
       font-size: 1.5rem
@@ -509,12 +562,7 @@
     width: 91%
   .ymap-container
     margin-bottom: 2rem
-          
+ 
       
-@media screen and ( max-width: 358px )  
-  .team
-    &__logo
-      display: none     
-
 
   

@@ -37,6 +37,7 @@
     justify-content: space-between
   &__input
     padding: 0.1rem 0 0.5rem
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15)
     &-group
       display: flex
       flex-direction: column
@@ -72,21 +73,32 @@
       margin: auto      
       margin-bottom: 1.7rem      
     &-image
-      margin-bottom: 2.5rem
-  &__image
+      margin-bottom: 3rem
+      display: flex
+      justify-content: center
+  &__image    
+    margin-right: 0.1rem
     &-mail
-      background: $primary     
-    &--position
+      display: block
       width: 28px
-      height: 28px
-      margin-right: 7px
-      margin-left: 4px
+      height: 28px    
+      border-radius: 50%
+      background: $primary url('../img/footer-mail.svg') no-repeat center
+      background-size: 1rem
+    &-inst
+      display: block
+      width: 28px
+      height: 28px    
+      border-radius: 50%
+      background: $primary url('../img/footer-inst.svg') no-repeat center
+      background-size: 1rem
+      margin-left: 1rem
   &__phone
     text-decoration: none
     font-family: 'Yeseva One', cursive   
     font-weight: normal
-    font-size: 20px
-    line-height: 28px    
+    font-size: 1.428rem
+    line-height: 2rem 
     text-transform: uppercase
 
 .ymaps-2-1-76-map 

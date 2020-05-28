@@ -1,14 +1,20 @@
-@media screen and ( max-width: 1364px )
+@media screen and ( max-width: 1370px )
   .clients
+    &__card
+      padding-right: 20px
     &__text
-      padding-left: 25px
-      padding-right: 25px
-      max-width: 21rem
-// @media screen and ( max-width: 1274px )
-//   .clients
-//     &__text
-//       max-width: 19rem
+      max-width: 22rem
+      padding-right: 10px
+@media screen and ( max-width: 1278px )
+  .clients
+    &__card
+      padding-right: 0px
+    &__text
+      max-width: 22rem
+      padding-right: 10px
 
+
+    
 @media screen and ( max-width: 1256px )
   .swiper
     &-slide      
@@ -34,9 +40,7 @@
   .clients
     &__text
       font-size: 1rem
-      max-width: 25rem
-      padding-left: 15px
-      padding-right: 25px           
+      max-width: 25rem                
     &__linear, &__time
       font-size: 1rem
     &__title
@@ -45,12 +49,23 @@
   .col-32
     flex-basis: 30%
 
-@media screen and ( max-width: 1090px )
-  .clients
+
+@media screen and ( max-width: 1170px )
+  .clients         
     &__text      
-      max-width: 21rem 
-      padding-left: 21px
-      padding-right: 35px
+      max-width: 23rem
+@media screen and ( max-width: 1054px )
+  .clients         
+    &__text      
+      max-width: 21rem
+      padding-right: 15px
+  
+@media screen and ( max-width: 1004px )
+  .clients         
+    &__text      
+      max-width: 17rem
+      padding-right: 8px
+      padding-left: 14px
   
 
 @media screen and ( min-width: 992px )
@@ -98,10 +113,15 @@
     &:hover
       text-decoration: none
       color: $light
-  
+  .footer
+    &__image
+      &:hover
+        background-color: $dark
+        border: 2px solid $primary
     
 
-@media screen and ( max-width: 992px )
+@media screen and ( max-width: 992px ) 
+      
   .col-33
     max-width: 100%
     margin: auto
@@ -298,6 +318,7 @@
     &__section-title      
       max-width: 26rem
       margin: auto
+      order: 5
   .video__play
     width: 5.2rem
   .footer__map
@@ -316,7 +337,9 @@
   .hero
     &__scroll-down
       display: none
-
+    &::after
+      display: none
+  
 @media screen and ( max-height: 465px )
   .modal
     &__dialog
@@ -421,6 +444,8 @@
       margin-bottom: 1.4rem
   .control
     margin-bottom: 0
+    &__container
+      width: 91%
     &__video
       min-height: 17rem
       margin-bottom: 2.35rem
@@ -485,8 +510,7 @@
     &__section
       &-image
         margin-bottom: 0
-      &-title
-        order: 5
+      &-title        
         max-width: 26rem
         margin: auto
       &__heading
@@ -496,10 +520,13 @@
     &__map
       margin: 0
     &__image
-      &--position
-        width: 39px
-        height: 39px
-        margin-left: 9px
+      width: 39px
+      height: 39px
+      background-size: 1.725rem
+      &-inst
+        margin-left: 1.6rem
+      
+      
   .footer__policy > div:nth-child(2)    
     top: 20px
     left: 0
@@ -524,7 +551,7 @@
         margin-bottom: 1.6rem
       &-description
         max-width: 27rem
-        margin-bottom: 6.8rem
+        margin-bottom: 3.8rem
     &__about
       display: none
     &__image
@@ -536,8 +563,7 @@
         justify-content: end
         
     &__description
-      margin-top: -6.6rem
-      margin-right: 3.3rem
+      margin-top: -6.6rem      
       max-width: 19.416rem
     &__name
       font-size: 1.5rem
@@ -558,8 +584,7 @@
     //   margin-bottom: 1.65rem
     &__word
       margin-bottom: 2rem
-  .container
-    width: 91%
+  
   .ymap-container
     margin-bottom: 2rem
  

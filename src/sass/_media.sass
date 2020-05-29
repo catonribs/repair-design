@@ -45,7 +45,7 @@
       font-size: 1rem
     &__title
       font-size: 1rem
-      padding-right: 10px
+      padding-right: 30px
   .col-32
     flex-basis: 30%
 
@@ -59,6 +59,8 @@
     &__text      
       max-width: 21rem
       padding-right: 15px
+    &__title
+      padding-right: 15px
   
 @media screen and ( max-width: 1004px )
   .clients         
@@ -66,7 +68,8 @@
       max-width: 17rem
       padding-right: 8px
       padding-left: 14px
-  
+    &__title
+      padding-right: 10px
 
 @media screen and ( min-width: 992px )
   .hero 
@@ -239,6 +242,10 @@
   .ymap-container
     width: 100%
     max-width: 100%    
+
+  .invalid 
+    margin-bottom: -13px
+
 @media screen and ( max-width: 768px )
   .hero
     &__content
@@ -309,9 +316,25 @@
       max-width: 28.333rem
     &__video
       min-height: 17rem
+    &__input
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7)
+  
+  .ymap-container 
+    margin-bottom: 2rem
+    height: 21.3rem
   
       
   .footer
+    &__wrap
+      margin: 0
+      padding: 0
+      margin-bottom: 3rem
+    &__button
+      margin: 0
+    &__container
+      display: flex
+      flex-direction: column
+      margin-top: -4rem
     &__form
       display: flex
       flex-direction: column
@@ -319,6 +342,8 @@
       max-width: 26rem
       margin: auto
       order: 5
+    &__input
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7)
   .video__play
     width: 5.2rem
   .footer__map
@@ -510,7 +535,8 @@
     &__section
       &-image
         margin-bottom: 0
-      &-title        
+      &-title    
+        order: 5    
         max-width: 26rem
         margin: auto
       &__heading
